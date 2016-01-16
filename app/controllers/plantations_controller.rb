@@ -5,6 +5,7 @@ class PlantationsController < ApplicationController
 
   def show
     @plantation = Plantation.find(params[:id])
+    @fruits = @plantation.fruits
   end
 
   def new
