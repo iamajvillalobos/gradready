@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116115206) do
+ActiveRecord::Schema.define(version: 20160116115359) do
 
   create_table "fruits", force: :cascade do |t|
     t.string   "name"
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(version: 20160116115206) do
     t.string   "variety"
     t.string   "color"
     t.date     "harvested_at"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "plantation_id"
   end
 
 end

@@ -15,4 +15,14 @@
   <% end %>
 </ul>
 
+<h2>Vegetables:</h2>
+<div>
+  <%= link_to "Add Vegetable", new_plantation_vegetable_path(@plantation) %>
+</div>
+
+<ul>
+  <% @vegetables.each do |vegetable| %>
+    <li><%= link_to vegetable.name, plantation_vegetable_path(@plantation, vegetable) %></li>
+  <% end %>
+</ul>
 

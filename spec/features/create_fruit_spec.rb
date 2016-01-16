@@ -11,6 +11,8 @@ describe "Creating a fruit" do
     expect(current_path).to eq(new_plantation_fruit_path(plantation))
 
     fill_in "Name", with: "Orange"
+    fill_in "Variety", with: "Ponkan"
+    fill_in "Color", with: "Orange"
 
     click_button 'Create Fruit'
 

@@ -1,0 +1,21 @@
+<%= form_for([@plantation, @vegetable]) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :variety %>
+    <%= f.text_field :variety %>
+  </div>
+  <div>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  <div>
+    <%= f.label :harvested_at %>
+    <%= f.date_select :harvested_at %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
