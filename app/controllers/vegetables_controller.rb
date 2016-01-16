@@ -14,6 +14,24 @@ class VegetablesController < ApplicationController
     end
   end
 
+  def show
+    @vegetable = Vegetable.find(params[:id])
+  end
+
+  def edit
+    @vegetable = Vegetable.find(params[:id])
+  end
+
+  def update
+    @vegetable = Vegetable.find(params[:id])
+
+    if @vegetable.update(vegetable_params)
+      redirect_to plantation_vegetable_path(@plantation, @vegetable)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def vegetable_params
