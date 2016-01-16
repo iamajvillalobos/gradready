@@ -32,6 +32,13 @@ class FruitsController < ApplicationController
     end
   end
 
+  def destroy
+    @fruit = Fruit.find_by(params[:id])
+    if @fruit.destroy
+      redirect_to @plantation
+    end
+  end
+
   private
 
   def fruit_params

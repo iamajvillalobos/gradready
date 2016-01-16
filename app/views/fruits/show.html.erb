@@ -4,4 +4,5 @@
 
 <div>
   <%= link_to 'Edit Fruit', edit_plantation_fruit_path(@plantation, @fruit) %>
+  <%= link_to 'Delete Fruit', plantation_fruit_path(@plantation, @fruit), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
