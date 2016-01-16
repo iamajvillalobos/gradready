@@ -1,0 +1,11 @@
+<h1>List of Plantations</h1>
+
+<p>
+  <%= link_to "Add new plantation", new_plantation_path %>
+</p>
+
+<ul>
+  <% @plantations.each do |plantation| %>
+    <li><%= link_to plantation.name, plantation %></li>
+  <% end %>
+</ul>

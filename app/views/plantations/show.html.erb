@@ -1,0 +1,6 @@
+<h1><%= @plantation.name %></h1>
+
+<div>
+  <%= link_to "Edit Plantation", edit_plantation_path(@plantation) %>
+  <%= link_to "Delete Plantation", plantation_path(@plantation), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
