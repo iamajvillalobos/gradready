@@ -32,6 +32,13 @@ class VegetablesController < ApplicationController
     end
   end
 
+  def destroy
+    @vegetable = Vegetable.find(params[:id])
+    if @vegetable.destroy
+      redirect_to @plantation
+    end
+  end
+
   private
 
   def vegetable_params
