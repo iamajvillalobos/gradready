@@ -1,8 +1,15 @@
-<h1><%= @fruit.name %></h1>
-<h2><%= @fruit.variety %></h2>
-<h2><%= @fruit.color %></h2>
+<div class="page-header">
+  <h2><%= @fruit.name %></h2>
+</div>
+
+<h4>Variety:</h4>
+<p><%= @fruit.variety %></p>
+<h4>Color:</h4>
+<p><%= @fruit.color %></p>
+
+<hr>
 
 <div>
-  <%= link_to 'Edit Fruit', edit_plantation_fruit_path(@plantation, @fruit) %>
-  <%= link_to 'Delete Fruit', plantation_fruit_path(@plantation, @fruit), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit Fruit', edit_plantation_fruit_path(@plantation, @fruit), class: 'btn btn-sm btn-success' %>
+  <%= link_to 'Delete Fruit', plantation_fruit_path(@plantation, @fruit), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
 </div>

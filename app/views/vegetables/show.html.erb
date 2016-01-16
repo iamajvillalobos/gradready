@@ -1,9 +1,21 @@
-<h1><%= @vegetable.name %></h1>
-<h2><%= @vegetable.variety %></h2>
-<h2><%= @vegetable.color %></h2>
-<h2><%= @vegetable.harvested_at %></h2>
+<div class="page-header">
+  <h2><%= @vegetable.name %></h2>
+</div>
+
+<h4>Variety:</h4>
+<p><%= @vegetable.variety %></p>
+<h4>Color:</h4>
+<p><%= @vegetable.color %></p>
+<h4>Harvested:</h4>
+<p><%= time_ago_in_words(@vegetable.harvested_at) %> ago</p>
+
+<hr>
 
 <div>
-  <%= link_to 'Edit Vegetable', edit_plantation_vegetable_path(@plantation, @vegetable) %>
-  <%= link_to 'Delete Vegetable', plantation_vegetable_path(@plantation, @vegetable), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit Vegetable', edit_plantation_vegetable_path(@plantation, @vegetable), class: 'btn btn-sm btn-success' %>
+  <%= link_to 'Delete Vegetable', plantation_vegetable_path(@plantation, @vegetable), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
 </div>
+
+
+
+

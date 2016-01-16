@@ -1,11 +1,14 @@
-<h1>List of Plantations</h1>
+<div class="page-header">
+  <h1>Plantation's List</h1>
+</div>
 
 <p>
-  <%= link_to "Add new plantation", new_plantation_path %>
+  <%= link_to "Add new plantation", new_plantation_path, class: 'btn btn-primary' %>
 </p>
 
-<ul>
+<div>
   <% @plantations.each do |plantation| %>
-    <li><%= link_to plantation.name, plantation %></li>
+    <h3><%= link_to plantation.name, plantation %></h3>
   <% end %>
-</ul>
+</div>
+

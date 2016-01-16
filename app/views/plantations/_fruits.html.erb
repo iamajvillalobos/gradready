@@ -1,0 +1,8 @@
+<div class="col-lg-6">
+  <div class="page-header">
+    <h3>Fruits <%= link_to "Add Fruit", new_plantation_fruit_path(@plantation), class: 'btn btn-sm btn-primary' %></h3>
+  </div>
+  <% @fruits.each do |fruit| %>
+    <h4><%= link_to fruit.name, plantation_fruit_path(@plantation, fruit) %></h4>
+  <% end %>
+</div>

@@ -1,28 +1,15 @@
-<h1><%= @plantation.name %></h1>
-<div>
-  <%= link_to "Edit Plantation", edit_plantation_path(@plantation) %>
-  <%= link_to "Delete Plantation", plantation_path(@plantation), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="page-header">
+  <h1><%= @plantation.name %></h1>
 </div>
 
-<h2>Fruits:</h2>
 <div>
-  <%= link_to "Add Fruit", new_plantation_fruit_path(@plantation) %>
+  <%= link_to "Edit Plantation", edit_plantation_path(@plantation), class: 'btn btn-success' %>
+  <%= link_to "Delete Plantation", plantation_path(@plantation), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 </div>
 
-<ul>
-  <% @fruits.each do |fruit| %>
-    <li><%= link_to fruit.name, plantation_fruit_path(@plantation, fruit) %></li>
-  <% end %>
-</ul>
-
-<h2>Vegetables:</h2>
-<div>
-  <%= link_to "Add Vegetable", new_plantation_vegetable_path(@plantation) %>
+<div class="row">
+  <%= render 'fruits' %>
+  <%= render 'vegetables' %>
 </div>
 
-<ul>
-  <% @vegetables.each do |vegetable| %>
-    <li><%= link_to vegetable.name, plantation_vegetable_path(@plantation, vegetable) %></li>
-  <% end %>
-</ul>
 
