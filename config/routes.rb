@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vegetables
   resources :plantations do
     resources :fruits
   end
