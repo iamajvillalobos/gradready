@@ -7,9 +7,9 @@ describe "Viewing a list of vegetables" do
     vegetable2 = plantation1.vegetables.create!(vegetable_attributes(name: "Dill"))
 
     plantation2= Plantation.create!(name: "Plantation 2")
-    vegetable3 = plantation2.vegetables.create!(vegetable_attributes, name: "Lettuce")
+    vegetable3 = plantation2.vegetables.create!(vegetable_attributes( name: "Lettuce"))
 
-    visit plantation_url(plantation)
+    visit plantation_url(plantation1)
 
     expect(page).to have_text(vegetable1.name)
     expect(page).to have_text(vegetable2.name)

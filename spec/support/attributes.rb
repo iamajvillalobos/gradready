@@ -12,7 +12,7 @@ def fruit_attributes(overrides = {})
   }.merge(overrides)
 end
 
-def vegetables_attributes(overrides = {})
+def vegetable_attributes(overrides = {})
   {
     name: "Carrots",
     variety: "Artist",
